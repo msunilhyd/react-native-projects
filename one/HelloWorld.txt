@@ -1,0 +1,20 @@
+Example of a Stateful Component
+
+class HelloWorld extends React.Component{
+	constructor() {
+		super()
+		this.state = { name: 'Chris'}
+	}	
+
+	render(){
+		return (
+			<SomeComponent/>
+		)
+	}
+}
+
+Example of a stateless Component
+
+const HelloWorld = () => (
+	<SomeComponent/>
+)

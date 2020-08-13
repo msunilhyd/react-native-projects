@@ -1,0 +1,38 @@
+import React from 'react'
+import { View, Text, StyleSheet } from 'react-native'
+
+
+class HelloWorld extends React.Component {
+	constructor () {  => Constructor sets a state object
+		super()				with a name property
+		this.state = {
+			name: 'React Native in Action'
+		}
+	}
+
+	componentDidMount () {   => Final lifecycle method
+		console.log('mounted..') 
+	}
+
+	render () {
+		return (
+			<View style={styles.container}>
+				<Text>{this.state.name}</Text>
+			</View>
+		)
+	}
+}
+
+const styles = StyleSheet.create({
+	container: {
+		marginTop: 100,
+		flex: 1
+	}
+})
+
+
+changeState by calling :-
+
+this.setState({
+	name: 'Some other name'
+})
